@@ -4,7 +4,7 @@
 
 # Site
 title: Dictator's BLOG 
-subtitle: Dictator's BLOG
+subtitle: 笔记，摘录，实践 
 description: 初心恒在，依旧朴素谦卑
 keywords: "linux,Devops,blog"
 author: Dictator
@@ -17,6 +17,13 @@ url: http://blog.yangchong.top
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
+
+#search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
 
 # Directory
 source_dir: source
@@ -41,8 +48,8 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
-  tab_replace:
+  auto_detect: false 
+  tab_replace:  
   
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -80,6 +87,19 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: next
+
+
+#RSS订阅
+plugin:
+ - hexo-generator-feed
+
+#RSS
+feed:
+    type: atom
+    path: atom.xml
+    limit: 10
+    hub:
+    content: 'true'
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
